@@ -1,0 +1,40 @@
+name: ${project.name}
+version: ${project.version}
+author: kosakriszi, bmlzootown
+main: com.kosakorner.spectator.Spectator
+depend: [ProtocolLib]
+api-version: 1.15
+
+commands:
+  spectate:
+    aliases: [spec]
+    description: Access to spectate.
+    permission: spectator.use.spectate
+  spectatecycle:
+    aliases: [speccycle]
+    description: Cycle through all online players.
+    permission: spectator.use.cycle
+    usage: '§cUsage: /<command> <start|stop> ...'
+  spectatereload:
+    aliases: [specreload]
+    description: Reload plugin configs.
+    permission: spectator.reload
+
+permissions:
+  spectator.*:
+    description: Grant all Spectator permissions.
+    children:
+      spectator.use.*:
+        description: Access to all Spectator commands.
+        children:
+          spectator.use.spectate: true
+          spectator.use.teleport: true
+          spectator.use.inventory: true
+          spectator.use.cycle: true
+      spectator.bypass.*:
+        description: Bypass certain Spectator features.
+        children:
+          spectator.bypass.tablist: true
+          spectator.bypass.viewable: true
+      spectator.reload:
+        description: Access to reload all Spectator configs.
