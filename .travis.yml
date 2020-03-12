@@ -4,6 +4,6 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: $GITHUB_TOKEN
+    secure: "${GITHUB_TOKEN}"
   skip_cleanup: true
-  file: "$TRAVIS_BUILD_DIR/target/$TARGET"
+  file: "${TARGET}"
