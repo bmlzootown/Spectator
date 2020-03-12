@@ -6,4 +6,4 @@ deploy:
   api_key:
     secure: $GITHUB_TOKEN
   skip_cleanup: true
-  file: "${TARGET}"
+  file: "$TRAVIS_BUILD_DIR/target/$TARGET"
