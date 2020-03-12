@@ -1,6 +1,6 @@
 language: java
 before_deploy:
-  - export TARGET=$(ls target/WhosThere-*.jar)
+  - export TARGET=$(ls target/Spectator-*.jar)
 deploy:
   provider: releases
   api_key:
