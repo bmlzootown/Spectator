@@ -3,7 +3,7 @@ version: ${project.version}
 author: kosakriszi, bmlzootown
 main: com.kosakorner.spectator.Spectator
 depend: [ProtocolLib]
-api-version: 1.15
+api-version: 1.18
 
 commands:
   spectate:
